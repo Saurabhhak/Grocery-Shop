@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Order Now
+        </title>
+        <!-- <link rel="stylesheet" href="style.css"> -->
+    </head>
+    <body>
+        <form method="post">
+            <table> 
+            <div class="form-shop1">
+                <label for="name">Name</label>
+                <input type="text" name="myName"id="name"placeholder="Enter your Name">
+            </div>
+            <div class="form-shop2">
+                <label for="email">Email</label>
+                <input type="email" name="Email"id="email"placeholder="Enter your Email">
+            </div>
+            <div class="form-shop3">
+                <label for="Phone">Phone</label>
+                <input type="Phone" name="Phone"id="Phone"placeholder="Enter your Phone">
+                    
+            <div class="form-shop4">
+                <label for="Address">Address</label>
+                <textarea name="Address" id="Address"cols="30" rows="10" placeholder="Enter your Address..."></textarea>
+            </div>
+            <input type="submit" value="submit">
+            <input type="reset" value="reset">
+            </div>
+            </table>
+        </form>
+        
+        <script>
+            let url = "https://script.google.com/macros/s/AKfycbwUtNZQEFPBvK-8A-bmrMaJwM3r53IuzQYmAX4Dkom7xcq2KfNljISsNxk-0ZHp_cIN/exec";
+            let form = document.querySelector("form");
+            let submit = document.querySelector(".submit");
+            let message = document.querySelector(".message");
+            form.addEventListener('submit', (e) => { 
+                e.preventDefault();
+                submit.value = "submitting.."
+                fetch(url, { 
+                    method: "POST",
+                    body: new FormData(form)
+                })
+                .then(res => res.text())
+                .then(data => {
+                    message.innerHTML = data;
+                    submit.value = "submit"
+                })
+                .catch(err => {
+                    message.innerHTML= err;
+                    submit,value = "submit"
+                })
+            })
+            </script>
+        </body>
+        </html>

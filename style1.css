@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500&display=swap');
+:root
+{
+  --green: green;
+  --black: #130f40;
+  --light-color: #666;
+  --box-shadow: 0.1rem 1rem rgba(0, 0, 0, 0);
+  --border: 2rem solid rgba(0,0,0.1);
+  --outline: 2rem solid rgba(0,0,0.1);
+}
+*
+{
+  font-family: 'Nunito', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+}
+*::selection
+{
+  background: var(--green);
+  color: #fff;
+}
+
+html
+{
+  font-size: 62.5%;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+.btn
+{
+  border: .2rem solid var(--black);
+  margin-top: 1rem;
+  display: inline-block;
+  padding: .8rem 3rem;
+  font-size: 1.7rem;
+  border-radius: .5rem;
+  color: var(--green);
+  cursor: pointer;
+  background: none;
+}
+.btn:hover
+{
+  background: var(--green);
+  color: #fff;
+}
+body
+{
+  background: #eee;
+}
+.header-1
+{
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 9%;
+  background: #ece80f;
+  box-shadow: var(--box-shadow);
+}
+.logo
+{
+  font-size: 3rem;
+  font-weight: bolder;
+  margin-right: 8px;
+  color: var(--black);
+}
+.logo i
+{
+  color: var(--green);
+  padding: .5rem;
+}
+
+/*css code for search btn styling start*/
+
+.header-1 .search-box-container
+{
+  display: flex;
+  height: 5rem;
+}
+.header-1 .search-box-container #search-box
+{
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+  font-size: 2rem;
+  color: #333;
+  border: .1rem solid rgba(0,0,0,.1);
+  text-transform: none;
+
+} 
+.header-1 .search-box-container label
+{
+  height: 100%;
+  width: 8rem;
+  font-size: 2.5rem;
+  line-height: 5rem;
+  color: #fff;
+  background: var(--green);
+  text-align: center;
+  cursor: pointer;
+}
+.header-1 .search-box-container label:hover
+{
+  background: var(--black);
+}
+/*css code for search btn styling end*/
+
+/*css code for header-2 start start*/
+.header-2
+{
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 9%;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+/*css code for navber option styling start */
+.header-2 .navbar a
+{
+  padding: .5rem 1.5rem;
+  font-size: 2rem;
+  border-radius: .5rem;
+  color: var(--black);
+}
+.header-2 .navbar a:hover
+{
+  background: var(--green);
+  color: #fff;
+}
+/*css code for navber option btn styling start */
+
+/*css code for icons btn styling start */
+.header-2 .icons div
+{
+  border: 0px solid;
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  border-radius: .5rem;
+  background: #eee;
+  color: var(--black);
+  font-size: 1.5rem;
+  margin-right: .3rem;
+  text-align: center;
+  cursor: pointer;
+}
+.header-2 .icons div:hover
+{
+  background: var(--green);
+  color: white;
+}
+/*css code for icons btn styling start */
+
+#menu-btn
+{
+  display: none;
+}
+
+.header-2 .shopping-cart
+{
+  border: 0px solid;
+  position: absolute;
+  top: 110%;
+  right: -110%;
+  padding: 1rem;
+  border-radius: .5rem;
+  box-shadow: var(--box-shadow);
+  width: 35rem;
+  background: #fff;
+}
+
+/*onclick effect for shopping cart */
+.header-2 .shopping-cart.active
+{
+  right: 2rem;
+  transition: .4s linear;
+/* onclick effect for shopping cart * */
+
+/*css code for shopping-cart item styling */
+}
+.header-2 .shopping-cart .box
+{
+  border: 0px solid;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  margin: 1rem 0;
+}
+.header-2 .shopping-cart .box img
+{
+  height: 10rem;
+}
+.header-2 .shopping-cart .box .fa-trash
+{
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  cursor: pointer;
+  color: var(--light-color);
+  transform: translateY(-50%);
+}
+.header-2 .shopping-cart .box .fa-trash:hover
+{
+  color: var(--green)
+}
+.header-2 .shopping-cart .box .content h3
+{
+  color: var(--black);
+  font-size: 1.7rem;
+  padding-bottom: 1rem;
+}
+.header-2 .shopping-cart .box .content span
+{
+  color: var(--light-color);
+  font-size: 1.6rem;
+}
+.header-2 .shopping-cart .box .content .quantity
+{
+  padding-left: 1rem;
+}
+.header-2 .shopping-cart .total
+{
+  font-size: 2.5rem;
+  padding: 1rem 0;
+  text-align: center;
+  color: var(--black);
+}
+.header-2 .shopping-cart .btn
+{
+  display: block;
+  text-align: center;
+  margin: 1rem; 
+}
+/*css code for shopping-cart item styling */
+
+/*css code for login form styling */
+.header-2 .login-form
+{
+  top: 110%;
+  right: -110%;
+  width: 30rem;
+  box-shadow: var(--box-shadow);
+  border: 0px solid;
+  position:absolute;
+  padding: 2rem;
+  border-radius: .5rem;
+  background:#fff;;
+  text-align: center;
+}
+
+/* onclick effect for login form*/
+.header-2 .login-form.active
+{
+  right: 2rem;
+  transition: .4s linear;
+}
+/* onclick effect for login form*/
+
+.header-2 .login-form h3
+{
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: var(--black);
+}
+.header-2 .login-form .box
+{
+  border: 0px solid;
+  margin: .7rem 0;
+  border-radius: .5rem;
+  padding: 1rem;
+  background:#eee; 
+  font-size: 1.6rem;
+  color: var(--black0);
+  text-transform: none;
+}
+.header-2 .login-form p
+{
+  font-size: 1.4rem;
+  padding: .5rem;
+  color: var(--light-color);
+}
+.header-2 .login-form p a
+{
+  color: var(--green);
+  text-decoration: underline;
+}
+/* ccs code for login form styling */
+/*css code for header-2 start start*/
+
+/*css code for baneer section start*/
+section
+{
+  padding: 2rem 9%;
+}
+.home
+{
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  background: url(image\banner-img.jpg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media quries */
+/*@media (max-width: 791x)
+{
+  html
+{
+  font-size: 40%;
+}
+}
+/*
+/* media quries */
+/*@media (max-width: 245px)
+{
+  html
+{
+  font-size: 35%;
+}
+}
+ */
+
+
+

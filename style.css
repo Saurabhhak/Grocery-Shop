@@ -1,0 +1,92 @@
+body
+{
+  margin: 0;
+  margin-top: -50px;
+  padding: 10px;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  font-family: 'Loto'sans-serif;
+  font-weight: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  background: #ecf0f3;
+}
+.Container
+{
+  width: 700;
+  height: 950;
+  padding: 60px 35px 35px 35px;
+  border-radius: 40px;
+  background: #ecf0f3;
+  box-shadow: 13px 13px 25px #cbced1,-13px -13px 25px #ffffff;
+}
+.title
+{
+  text-align: center;
+  font-size: 28px;
+  padding: 24px;
+  letter-spacing: 0.5;
+  color:rgb(50, 75, 73);
+}
+.Name, .Email, .Password, .Phone
+{
+  margin: 15px;
+  border-radius: 25px;
+  box-shadow: inset 8px 8px #cbced1,
+              inset -8px -8px -8px #ffffff;
+}
+.Customer-query, .member
+{
+  background: #ecf0f3;
+  margin: 15px;
+  border-radius: 25px;
+  box-shadow: inset 8px 8px #cbced1,
+       inset -8px -8px -8px #ffffff;  
+}
+.submit-button
+{
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  height: 60%;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: 900;
+  font-family: 'Loto', sans-serif;
+  color: #fff;
+  text-align:center;
+  background: #2f9b27;
+  box-shadow: 3px 3px 3px #b1b1b1, 
+              -3px -3px -3px #ffffff;
+  transition: 0.5s;
+}
+.reset
+{
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  height: 60%;
+  border-radius: 20px;
+  font-weight: 900;
+  font-family: 'Loto', sans-serif;
+  font-size: 18px;
+  background: red;
+  text-align: center;
+  color:#fff;
+  transition: 0.5s;
+  box-shadow: 3px 3px 3px rgb(231, 231, 231), 
+              -3px -3px -3px rgb(254, 253, 251);
+}
+.submit-button:hover, .reset:hover
+{
+  background: hsl(228, 96%, 45%);
+}
+.submit-button:active, .reset:active
+{
+background: rgb(3, 213, 250);
+}
